@@ -1,5 +1,10 @@
 // Init Github class
 const github = new Github;
+// Init UI
+const ui = new UI;
+
+// change year on copyright to current
+//ui.footerDate();
 
 // Search Input
 const searchUser = document.getElementById('searchUser');
@@ -13,7 +18,16 @@ searchUser.addEventListener('keyup', (e) => {
     // Make HTTP call
     github.getUser(userText)
     .then(data => {
-      console.log(data);
+      if(data.profile.message === 'Not Found') {
+        // Show alert
+        ui.showAlert();
+      } else {
+        // Show Profile
+        ui.showProfile(data.profile);
+      }
     })
+  } else {
+    // Clear profile
+    ui.clearProfile();
   }
 });
