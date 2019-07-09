@@ -1,7 +1,7 @@
 # Github API User Search
 Written by Kris Lafrance
 
-Uses HTML5, Javascript, Fetch, Github API
+Uses HTML5, Javascript, Fetch API, Github API, Bootstrap
 
 # Features
 

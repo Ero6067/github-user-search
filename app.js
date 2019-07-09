@@ -4,7 +4,7 @@ const github = new Github;
 const ui = new UI;
 
 // change year on copyright to current
-//ui.footerDate();
+ui.footerDate();
 
 // Search Input
 const searchUser = document.getElementById('searchUser');
@@ -20,7 +20,7 @@ searchUser.addEventListener('keyup', (e) => {
     .then(data => {
       if(data.profile.message === 'Not Found') {
         // Show alert
-        ui.showAlert();
+        ui.showAlert('User not found', 'alert alert-danger');
       } else {
         // Show Profile
         ui.showProfile(data.profile);
