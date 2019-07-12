@@ -10,5 +10,5 @@ Uses HTML5, Javascript, Fetch API, Github API, Bootstrap
 
 # Run
 
-* `https://github.com/Ero6067/github-user-search.git`
+* `git clone https://github.com/Ero6067/github-user-search.git`
 * open index.html
